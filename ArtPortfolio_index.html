@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hf Canvas - Jacob Heathfield</title>
+  <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css"> <!-- Link to the font awesome file -->
+  <link rel="stylesheet" href="ArtPortfolio_styles.css"> <!-- Link to the CSS file -->
+  <link rel="icon" type="image/png" href="images/YouTube_Profile_Pic.png"> <!-- Link to the Hf Canvas logo file to display on the tab -->
+</head>
+<body>
+
+  <nav> <!-- COLLAPSE Navigation menu bar at top. -->
+    <a href="javascript:void(0);" onclick="showSection('Home')" id="logo-link"> <!-- Hf Canvas logo, which goes to the index page -->
+      <img src="images/YouTube_Profile_Pic.png" alt="NavLogo">
+    </a>
+    <a href="javascript:void(0);" onclick="showSection('About')">About</a>
+    <a href="javascript:void(0);" onclick="showSection('Works')">Works</a>
+    <a href="javascript:void(0);" onclick="showSection('SocialMedia')">Social Media</a>
+
+  </nav>
+
+  <header id="main-header">
+    <!--<img id="header-image" src="images/HF Canvas Banner.png" alt="Header Image">-->
+  </header>
+
+<div> <!-- COLLAPSE all the section details here. -->
+
+  <section id="Home"> <!-- DONE! The contents of the initial "Index" section -->
+    <h2>ART BY JACOB HEATHFIELD<br /></h2>
+    <p>Check out this recent project below!!!<br><br></p>
+
+    <div class="artwork"> <!-- Place whatever gallery work in this section to be highlighted on the HOME page. -->
+      <img src="images/artwork/2024b_Eyes Up Here.jpeg" alt="Image n/a">
+      <div class="artwork-info">
+        <h3>Eyes Up Here: Changing the Male Gaze</h3>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="About" class="hidden"> <!-- DONE! The contents of the "About" section. The "hidden" class calls the css protocol to hide the contents. -->
+    <h2>About</h2>
+    <img src="images/Photograph of JH.jpg" alt="Photograph of Jacob Heathfield">
+    <p>Growing up in the Greater Toronto Area, I initially did not see myself becoming an artist. It was only after taking a course in high school when I began to make representational painting with acrylics. Upon entering university, I began to experiment more with different types of media, themes and concepts. It was also at this time during the early 2020's in which I felt a substantial increase in anti-Asian racism, both physical and online.
+      That particular "wave" of discriminatory hatred can certainly be attributed to the popularization of anti-China and anti-Chinese rhetoric from prominent right-wing populist figures in North America. <br /> <br />
+      I became obsessed with wanting to understand why such bigotry exists, and why (in the back of my mind) I never *fully* felt belonged as a Canadian with an Indonesian background. Through this process of trying to learn and understand the dynamics behind prominent issues, have I gotten to learn about the unique stories and perspectives from friends, scholars and figures around the world. My latest art projects have attemped to analyze and shed light on these issues related to concepts like colonialism and capitalism in a manner that often provokes viewers to think differently and learn something new. <br /> <br />
+
+      The reason I continue to explore all kinds of injustices in my pieces is to demonstrate the common themes and intersections between issues. I hope that these pieces will help educate my audience to expand their knowledge and empathy towards the struggles of marginalized groups. <br /><br />
+    </p>
+    <p class="italic-text"> <!-- This is the italicized section at the bottom of the about page -->
+      Jacob Heathfield is currently enrolled at Brock University in Ontario, Canada. He is a member of the Brock Leaders Citizenship Society (BLCS) and volunteers for TTCriders, a public transit advocacy group out of the city of Toronto. <br><br>
+    </p>
+  </section>
+
+  <section id="Works" class="hidden"> <!-- DONE! The contents of the "Works" section -->
+    <h2>Works</h2> <!-- Section header title -->
+
+    <div id="myModal" class="modal"> <!-- Modal to be used for displaying the full-size image, creates things like the "X" to close the window -->
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <img id="modalImage">
+        <div id="caption"></div>
+      </div>
+      <!--img class="modal-content" id="modalImage"-->
+      <div id="caption"></div>
+    </div>
+
+    <div class="gallery"> <!-- Refers to the entire gallery of images and descriptions DO NOT USE APOSTROPHES IN THE POP-UP AREA -->
+      <!-- ADD 5 <br>s ar the end of the pop up description to include it on the pop up screen!!! Add 3 for the normal description text, this is to off center the description text close to the image above and not the one below (easier to know which artwork is which then) -->
+
+      <div class="artwork"> <!-- Eyes Up Here: Changing the Male Gaze (2024) -->
+        <img src="images/artwork/2024b_Eyes Up Here.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2024b_Eyes Up Here.jpeg', 'Eyes Up Here: Changing the Male Gaze', '(2024). Mixed Media (Marker, Ink and Charcoal) on Stonehenge.<br><br>Technically, there is nothing dirty about this piece.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Eyes Up Here: Changing the Male Gaze</h3>
+          <p>(2024). Mixed Media (Marker, Ink and Charcoal) on Stonehenge.<br><br>Technically, there is nothing dirty about this piece.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- NYC Sleeping Prank (2024) -->
+        <img src="images/artwork/2024a_New York City Sleeping Prank.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2024a_New York City Sleeping Prank.jpeg', 'New York City Sleeping Prank', '(2024). Marker and Charcoal on Mylar overlaid on top of Coloured Pencil on Stonehenge.<br><br>Who killed Jordan Neely?<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>New York City Sleeping Prank</h3>
+          <p>(2024). Marker and Charcoal on Mylar overlaid on top of Coloured Pencil on Stonehenge.<br><br>Who killed Jordan Neely?<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- EyePhone (2023) -->
+        <img src="images/artwork/2023c_EyePhone.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2023c_EyePhone.jpeg', 'EyePhone', '(2023). Mixed Media.<br><br>An enlarged iPhone where each pixel is drawn in with red, green and blue markers. Graphite acts as the screens polarizing layer.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>EyePhone</h3>
+          <p>(2023). Mixed Media.<br><br>An enlarged iPhone where each pixel is drawn in with red, green and blue markers. Graphite acts as the screen's polarizing layer.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Yonge-Dundas Square at Night (2023) -->
+        <img src="images/artwork/2023b_Yonge-Dundas Square.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2023b_Yonge-Dundas Square.jpeg', 'Yonge-Dundas Square at Night', '(2023). Soft and Oil Pastel with Mineral Oil on Stonehenge.<br><br>Night scene of the scramble crossing as large advertisement displays illuminate and attract attention upwards.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Yonge-Dundas Square at Night</h3>
+          <p>(2023). Chalk and Oil Pastel with Mineral Oil on Stonehenge.<br><br>Night scene of the scramble crossing as large advertisement displays illuminate and attract attention upwards.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Motor City: The American Dream (2023) -->
+        <img src="images/artwork/2023a_Motor City.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2023a_Motor City.jpeg', 'Motor City: The American Dream', '(2023). Acrylic Paint and Oil Pastel on Mylar.<br><br>The drab/hostile depiction of an American inner-city highway; decades after its construction tore down residential neighbourhoods.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Motor City: The American Dream</h3>
+          <p>(2023). Acrylic and Oil Pastel on Mylar.<br><br>The drab/hostile depiction of an American inner-city highway; decades after its construction tore down residential neighbourhoods.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Springing Into Action (2022) -->
+        <img src="images/artwork/2022c_Springing Into Action.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2022c_Springing Into Action.jpeg', 'Springing Into Action', '(2022). Charcoal with Mineral Oil on Stonehenge.<br><br>Observations of my brother during a ZOOM lecture versus playing video games on his computer.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Springing Into Action</h3>
+          <p>(2022). Charcoal with Mineral Oil on Stonehenge.<br><br>Observations of my brother during a ZOOM lecture versus playing video games on his computer.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Stranger on the Subway Platform (2022) -->
+        <img src="images/artwork/2022b_Stranger on the Subway.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2022b_Stranger on the Subway.jpeg', 'Stranger on the Subway', '(2022). Soft Pastel on Stonehenge with blank Stonhenge cutout slotted over and under.<br><br>What does the suspicious figure hide? Is it wrong to peel someones mask off and check their backpack items without their consent?<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Stranger on the Subway Platform</h3>
+          <p>(2022). Soft Pastel on Stonehenge with blank Stonehenge cutout slotted over and under.<br><br>What does the suspicious figure hide? Is it wrong to peel someone's mask off and check their backpack items without their consent?<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Blue Light (2022) -->
+        <img src="images/artwork/2022a_Blue Light.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2022a_Blue Light.jpeg', 'Blue Light', '(2022). Oil Paint on Canvas.<br><br>Scene of my brother studying late at night on his computer.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Blue Light</h3>
+          <p>(2022). Oil Paint on Canvas.<br><br>Scene of my brother studying late at night on his computer.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Borromean Rings (2021) -->
+        <img src="images/artwork/2021d_Borromean Rings.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2021d_Borromean Rings.jpeg', 'Borromean Rings', '(2021). Acrylic Paint on Canvas.<br><br>Three rings appear to be linked when they are simply overlapping one another in this optical illusion.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Borromean Rings</h3>
+          <p>(2021). Acrylic Paint on Canvas.<br><br>Three rings appear to be linked when they are simply overlapping one another in this optical illusion.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Portrait of Dudley the Dog (2021) -->
+        <img src="images/artwork/2021c_Portrait of Dudley the Dog.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2021c_Portrait of Dudley the Dog.jpeg', 'Portrait of Dudley the Dog', '(2021). Acrylic Paint on Canvas.<br><br>Commissioned painting of my neighbours dog.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Portrait of Dudley the Dog</h3>
+          <p>(2021). Acrylic Paint on Canvas.<br><br>Commissioned painting of my neighbour's dog.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Sailing Through Time (2021) -->
+        <img src="images/artwork/2021b_Sailing Through Time.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2021b_Sailing Through Time.jpeg', 'Sailing Through Time', '(2021). Acrylic Paint on Canvas.<br><br>Represtation of a steel-sail boat clock sailing through various clothes from my wardrobe.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Sailing Through Time</h3>
+          <p>(2021). Acrylic Paint on Canvas.<br><br>Represtation of a steel-sail boat clock sailing through various clothes from my wardrobe.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Nuclear Fallout [Series] (2021) -->
+        <img src="images/artwork/2021a_Nuclear Fallout.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2021a_Nuclear Fallout.jpeg', 'Nuclear Fallout [Series]', '(2021). Oil Pastel (left), Soft Pastel (middle), Charcoal (right), all on Stonehenge.<br><br>A flower field before and after a nuclear explosion destroys a city in the distant background.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Nuclear Fallout [Series]</h3>
+          <p>(2021). Oil Pastel (left), Soft Pastel (middle), Charcoal (right), all on Stonehenge.<br><br>A flower field before and after a nuclear explosion destroys a city in the distant background.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Waiting at a Standstill (2020) -->
+        <img src="images/artwork/2020c_Waiting at a Standstill.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2020c_Waiting at a Standstill.jpeg', 'Waiting at a Standstill', '(2020). Acrylic Paint on Canvas.<br><br>Lake scene in St. Marys, Ontario.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Waiting at a Standstill</h3>
+          <p>(2020). Acrylic Paint on Canvas.<br><br>Lake scene in St. Marys, Ontario.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Canadian Dark Roast (2020) -->
+        <img src="images/artwork/2020b_Canadian Dark Roast.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2020b_Canadian Dark Roast.jpeg', 'Canadian Dark Roast', '(2020). Digital.<br><br>A Canadian coffee advertisement with a news broadcast playing in the background, the headline of which says YEMEN BOMBINGS CONTINUE.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Canadian Dark Roast</h3>
+          <p>(2020). Digital.<br><br>A Canadian coffee advertisement with a news broadcast playing in the background, the headline of which says YEMEN BOMBINGS CONTINUE.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Vector Self-Portrait (2020) -->
+        <img src="images/artwork/2020a_Vector Self-Portrait.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2020a_Vector Self-Portrait.jpeg', 'Vector Self-Portrait', '(2020). Digital.<br><br>Digital self-portrait made with vector graphics instead of pixels.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Vector Self-Portrait</h3>
+          <p>(2020). Digital.<br><br> Digital self-portrait made with vector graphics instead of pixels.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- A Rainy Night (2019) -->
+        <img src="images/artwork/2019e_A Rainy Night.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2019e_A Rainy Night.jpeg', 'A Rainy Night', '(2019). Acrylic Paint on Mayfair.<br><br>It was a rainy night when I visited NYC.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>A Rainy Night</h3>
+          <p>(2019). Acrylic Paint on Mayfair.<br><br>It was a rainy night when I visited NYC.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Self-Potrait based on "Portrait of Olga Picasso" by Pablo Picasso (2019) -->
+        <img src="images/artwork/2019d_Self-Portrait (based on Pablo Picasso Portrait of Olga Picasso).jpeg" alt="Image n/a" onclick="openModal('images/artwork/2019d_Self-Portrait (based on Pablo Picasso Portrait of Olga Picasso).jpeg', 'Self-Potrait based on Portrait of Olga Picasso by Pablo Picasso', '(2019). Acrylic Paint on Mayfair.<br><br>Self-portrait where I swapped my face and upper body in from the original figure of Olga. The rest of the textures I tried to replicate as perfectly as possible<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Self-Portrait based on "Portrait of Olga Picasso" by Pablo Picasso</h3>
+          <p>(2019). Acrylic Paint on Mayfair.<br><br>Self-portrait where I swapped my face and upper body in from the original figure of Olga. The rest of the textures I tried to replicate as perfectly as possible.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Hypnosis (2019) -->
+        <img src="images/artwork/2019c_Hypnosis.jpg" alt="Image n/a" onclick="openModal('images/artwork/2019c_Hypnosis.jpg', 'Hypnosis', '(2019). Acrylic Paint on Canvas.<br><br>Part of a group project that formed the reference photo for this abstract painting.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Hypnosis</h3>
+          <p>(2019). Acrylic Paint on Canvas.<br><br>Part of a group project that formed the reference photo for this abstract painting.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Prelude (2019) -->
+        <img src="images/artwork/2019b_Prelude.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2019b_Prelude.jpeg', 'Prelude', '(2019). Acrylic Paint on Canvas.<br><br>Designed as a full-spread submission for the school yearbook. Depicts a warrior finishing their current journey, only to look forward to the new world that awaits in front of him.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Prelude</h3>
+          <p>(2019). Acrylic Paint on Canvas.<br><br>Designed as a full-spread submission for the school yearbook. Depicts a warrior finishing their current journey, only to look forward to the new world that awaits in front of him.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Facades (2019) -->
+        <img src="images/artwork/2019a_Facades.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2019a_Facades.jpeg', 'Facades', '(2019). Mixed Media.<br><br>Magazine clippings of glitzy consumerism and fashion hide the horrors of capitalism underneath.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Facades</h3>
+          <p>(2019). Mixed Media.<br><br>Magazine clippings of glitzy consumerism and fashion hide the horrors of capitalism underneath.<br><br><br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Reel Memories (2018) -->
+        <img src="images/artwork/2018c_Reel Memories.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2018c_Reel Memories.jpeg', 'Reel Memories', '(2018). Ink on Watercolour Paper.<br><br>A collection of my passions, memories and artworks. What is recorded from my eyes gets embedded into the reel footage.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Reel Memories</h3>
+          <p>(2018). Ink on Watercolour Paper.<br><br>A collection of my passions, memories and artworks. What is recorded from my eyes gets embedded into the reel footage.<br><br><br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Overflow (2018) -->
+        <img src="images/artwork/2018b_Overflow.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2018b_Overflow.jpeg', 'Overflow', '(2018). Acrylic Paint on Canvas.<br><br>Autumn forest setting in Halton Hills, Ontario.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Overflow</h3>
+          <p>(2018). Acrylic Paint on Canvas.<br><br>Autumn forest setting in Halton Hills, Ontario.<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- The Battle of Vimy Ridge (2018) -->
+        <img src="images/artwork/2018a_The Battle of Vimy Ridge.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2018a_The Battle of Vimy Ridge.jpeg', 'The Battle of Vimy Ridge', '(2018). Acrylic Paint on Canvas.<br><br>We are the Dead. Short days ago we lived, felt dawn, saw sunset glow. - John McCrae<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>The Battle of Vimy Ridge</h3>
+          <p>(2018). Acrylic Paint on Canvas.<br><br>"We are the Dead. Short days ago we lived, felt dawn, saw sunset glow". - John McCrae<br><br><br></p>
+        </div>
+      </div>
+
+      <div class="artwork"> <!-- Bridge at Sherman Falls (2017) -->
+        <img src="images/artwork/2017a_Bridge at Sherman Falls.jpeg" alt="Image n/a" onclick="openModal('images/artwork/2017a_Bridge at Sherman Falls.jpeg', 'Bridge at Sherman Falls', '(2017). Acrylic Paint on Canvas.<br><br>My first painting.<br><br><br><br><br>')">
+        <div class="artwork-info">
+          <h3>Bridge at Sherman Falls</h3>
+          <p>(2017). Acrylic Paint on Canvas.<br><br>My first painting.<br><br><br></p>
+        </div>
+      </div>
+
+  </section>
+
+  <section id="SocialMedia" class="hidden"> <!-- DONE! The contents of the "Social Media" section -->
+    <h2>Social Media Tags</h2>
+    <div class="social-icons">
+
+      <div class="social-icon"> <!-- Instagram section -->
+        <span class="social-icon-text-left">Instagram</span>
+        <a href="https://www.instagram.com/hf_canvas" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i> <!-- Calls for the fa logo for Instagram -->
+        </a>
+        <span class="social-icon-text-right">hf_canvas</span>
+      </div>
+
+      <div class="social-icon"> <!-- YouTube section -->
+        <span class="social-icon-text-left">YouTube</span>
+        <a href="https://www.youtube.com/channel/UCVpcA-t5AbNscQE9LkTeXaQ/videos" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-youtube"></i> <!-- Calls for the fa logo for Instagram -->
+        </a>
+        <span class="social-icon-text-right">Hf Canvas</span>
+      </div>
+
+      <div class="social-icon"> <!-- Email section -->
+        <span class="social-icon-text-left">Email</span>
+        <a href="mailto:heathfieldcanvas@gmail.com" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-envelope"></i> <!-- Calls for the fa logo for Email -->
+        </a>
+        <span class="social-icon-text-right">heathfieldcanvas@gmail.com</span>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- Link to the "ArtPortfolio_program" js file -->
+  <script src="ArtPortfolio_program.js"></script>
+
+</body>
+</html>

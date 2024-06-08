@@ -1,0 +1,257 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: #f8f8f8;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+h2 {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+header { /* Header is set to the Hf Canvas banner background. */
+  background-image: url('images/HF Canvas Banner.png');
+  background-size: cover; /* Ensures the image covers the entire header */
+  background-position: center; /* Centers the image within the header */
+  color: #fff; /* Set text color to white or another contrasting color */
+  margin-bottom: 20px;
+  padding: 250px; /* Add padding to allow the png text to be seen at min 16:9 ratio */
+  text-align: center; /* Align text to the center if needed */
+}
+
+nav {
+  display: flex;
+  align-items: center; /* Vertical align the nav buttons to the center */
+  background-color: #555;
+  text-align: left; /* Horizontal align the nav buttons to the left after the Hf logo */
+}
+
+nav a { /* Navigation bar styling. */
+  border-radius: 50px;
+  color: #fff;
+  padding: 13px; /* Makes it easier to click the buttons on the nav menu */
+  text-decoration: none; /* Makes the nav buttons not have the "link" underline which looks sketchy */
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+nav a:hover {
+     background-color: #333; /* Change background color on hover */
+     border-radius: 50px;
+   }
+
+section {
+  padding: 20px;
+}
+
+.artwork {
+  text-align: center;
+  margin-bottom: 20px;
+} /* artwork refers to the works images */
+
+.artwork img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.artwork-info {
+  text-align: center;
+}
+
+.artwork-info h3 {
+  font-size: 25px;
+  margin-bottom: 5px;
+  max-width: 300px; /* Adjust the value as needed */
+  text-align: center;
+}
+
+.artwork-info p {
+  font-size: 14px;
+  max-width: 300px; /* Adjust the value as needed */
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+} /* Refers to the "X" button to close out image pop up displays */
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 100px; /* Giving the gallery images ample bottom padding so they arent forced near the bottom of the window */
+} /* Regarding the images and descriptions in the Works section */
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.gallery img:hover { /* Adds a hover to the Works images */
+  opacity: 0.8; /* Adjust the opacity to your preference */
+}
+
+.modal { /* Refers to the pop-up window when clicking on images */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 90%;
+}
+
+.social-icons { /* Refers to the clickable social media icons */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.social-icons a i {
+  font-size: 24px;
+}
+
+.social-icons i {
+  transition: color 0.3s;
+}
+
+.social-icons a:hover i {
+  color: #ff6600; /* Change the color on hover */
+}
+
+#About img { /* Regarding the photo of me on the About page */
+  display: block; /* Ensures the image is displayed as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 80%; /* Ensures the image does not exceed its container's width */
+  height: auto; /* Allows the image to scale proportionally */
+}
+
+#About p {
+  max-width: 70%; /* Adjust the value to the desired maximum width */
+  margin: 0 auto; /* Centers the paragraph horizontally */
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#caption {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+#Home img {
+  display: block; /* Ensures the image is displayed as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 40%; /* Ensures the image does not exceed its container's width */
+  height: auto; /* Allows the image to scale proportionally */
+  padding-bottom: 70px;
+}
+
+#Home h3 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 50px;
+  max-width: 750px;
+  padding-bottom: 20px;
+}
+
+#Home p { /* The h2 title for the Home section */
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#logo-link img {
+  display: flex;
+  align-items: center;
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+#modalImage { /* Fixes the display size problem in the pop up menu! */
+  display: block;
+  width: auto; /* Set image width to auto */
+  height: auto; /* Set image height to auto */
+  margin: auto;
+  max-width: 100%; /* Ensure the image fits within the modal content */
+  max-height: 100%; /* Ensure the image fits within the modal content */
+  text-align: center;
+}
+
+#SocialMedia {
+  color: #333;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#SocialMedia h2 { /* The h2 title for the Social Media section */
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#SocialMedia span {
+  padding-top: 20px; /* Adjust the top padding as needed */
+  padding-bottom: 20px; /* Adjust the bottom padding as needed */
+}
